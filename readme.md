@@ -5,6 +5,7 @@
 <br>
 <p>
 <h2>THIS IS MY FIRST UNIVERSITY WEBSITE PROJECT</h2>
+<img style="margin:0 auto;" src="website.png"/>
 <ul>
 <li><b>LANGUAGE USED:- HTML,CSS,JAVASCRIPT,FIREBASE</b></li>
 <li><b>SOFTWARE:- VS CODE</b></li><br>
