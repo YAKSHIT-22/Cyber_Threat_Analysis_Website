@@ -4,7 +4,7 @@
 <h3 align="center">😎This Is A ❚█══CYBER THREAT ANALYSIS══█❚🤖</h3>
 <br>
 <p>
-<h2>THIS IS MY FIRST UNIVERSITY WEBSITE PROJECT</h2>
+<h2 align="center">THIS IS MY FIRST UNIVERSITY WEBSITE PROJECT</h2>
 <img style="margin:0 auto;" src="website.png"/>
 <ul>
 <li><b>LANGUAGE USED:- HTML,CSS,JAVASCRIPT,FIREBASE</b></li>
@@ -13,9 +13,8 @@
 <p align="center">
 <h2>Usage😁:-</h2>
 <ul>
-<li>This will make People aware of the increasing Cyber Threats and How to Be Safe From Them...</li>
+<li>This will make People aware of the increasing Cyber Threats and How to Be Safe From Them</li>
 
-😀
 <br>
 </p>
 <h2>Feel Free To Fork This Repo.(●'◡'●) And Please Support Me By Giving Star..🎇</h2>
