@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta name="description" content="CYBERSECURITY">
+	<meta name="keywords" content="THREATS">
+	<meta name="author" content="YAKSHT">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<title>CYBER | THREATS AND ANALYSIS</title>
+	<link rel="icon"
+		href="https://img.icons8.com/external-sketchy-juicy-fish/60/000000/external-cyber-cyber-security-sketchy-sketchy-juicy-fish-3.png">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css">
+</head>
+<style>
+	@import url('https://fonts.googleapis.com/css?family=Comfortaa');
+
+	* {
+		margin: 0;
+		padding: 0;
+		outline: none;
+		box-sizing: border-box;
+		font-family: 'Comfortaa', cursive;
+	}
+
+	body {
+		background: url('ikl.gif') no-repeat center;
+		background-size: cover;
+		width: 100%;
+		height: 100vh;
+		box-shadow: inset 0px 0px 10px 10px #008aff;
+	}
+
+	.wrapper {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		letter-spacing: 2px;
+	}
+
+	.wrapper h1 {
+		margin-bottom: 40px;
+		font-size: 42px;
+		color: #fff;
+	}
+
+	.wrapper p {
+		margin-bottom: 40px;
+		color: #b2b2b2;
+		font-size: 20px;
+	}
+
+	.newsletter {
+		max-width: 650px;
+		width: 100%;
+		position: relative;
+	}
+
+	.newsletter .input {
+		width: 100%;
+		padding: 30px 100px 30px 60px;
+		border-radius: 10px;
+		border: none;
+		font-weight: bold;
+	}
+
+	.newsletter .fas {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		left: 20px;
+		font-size: 20px;
+	}
+
+	.newsletter .btn {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		right: 10px;
+		background: #4dabf7;
+		justify-content: space-between;
+		padding: 15px 20px;
+		border-radius: 25px;
+		font-size: 12px;
+		letter-spacing: 5px;
+		color: #fff;
+		cursor: pointer;
+		text-transform: uppercase;
+	}
+
+	.bt {
+		top: 50%;
+		margin-top: 40px;
+		transform: translateY(-50%);
+		right: 30px;
+		background: linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
+			linear-gradient(227deg, #008aff, rgba(0, 138, 255, 0) 70%),
+			linear-gradient(104deg, #00ffc6, rgba(0, 255, 198, 0) 74%);
+		;
+		;
+		justify-content: space-between;
+		padding: 15px 20px;
+		border-radius: 25px;
+		font-size: 12px;
+		letter-spacing: 5px;
+		color: #fff;
+		cursor: pointer;
+		text-transform: uppercase;
+	}
+
+	.alert {
+		text-align: center;
+		padding: 10px;
+		background: #79c879;
+		color: #fff;
+		margin-bottom: 10px;
+		display: none;
+	}
+</style>
+
+<body>
+	<div class="wrapper">
+		<h1 class="text-center text-lg-center">Subscribe to our Newsletter</h1>
+		<p>Receive updates instanly</p>
+		<div class="newsletter">
+			<input autocomplete="off" type="email" class="input" id="email" maxlength="40"
+				placeholder="Enter Your Email" required>
+			<i class="fas fa-envelope"></i>
+			<div class="btn" onclick="submitForm(event)">Subscribe</div>
+
+		</div>
+		<div onclick="location.href='project.html'" class="bt">Home</div>
+		<div class="alert">Your message has been sent</div>
+	</div>
+	</script>
+
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+	<script>
+
+		firebase.initializeApp({
+			apiKey: "AIzaSyALeou5_nYlRxyc_dB0CI90LG2B1yuAgNw",
+			authDomain: "contact-form-eabbf.firebaseapp.com",
+			databaseURL: "https://contact-form-eabbf-default-rtdb.firebaseio.com",
+			projectId: "contact-form-eabbf",
+			storageBucket: "contact-form-eabbf.appspot.com",
+			messagingSenderId: "252973080050",
+			appId: "1:252973080050:web:81d0dfd92d26a5f8659f6b"
+		});
+		var db = firebase.firestore();
+
+
+	</script>
+	<script>
+		// Submit form
+		function submitForm(e) {
+			e.preventDefault();
+			var email = document.getElementById('email').value;
+			firebase.firestore().collection("subscription").add({
+				email: email,
+			});
+			// Show alert
+			document.querySelector('.alert').style.display = 'block';
+
+			// Hide alert after 3 seconds
+			setTimeout(function () {
+				document.querySelector('.alert').style.display = 'none';
+			}, 3000);
+
+			// Clear form
+			document.getElementById('email').value = '';
+		}
+
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="CYBERSECURITY">
+    <meta name="keywords" content="THREATS">
+    <meta name="author" content="YAKSHT">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>CYBER | THREATS AND ANALYSIS</title>
+    <link rel="icon"
+        href="https://img.icons8.com/external-sketchy-juicy-fish/60/000000/external-cyber-cyber-security-sketchy-sketchy-juicy-fish-3.png">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+
+    body {
+        overflow: hidden;
+        background: black;
+    }
+
+    section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: linear-gradient(to bottom, #f1f4f9, #dff1ff)
+    }
+
+    section .color {
+        position: absolute;
+        filter: blur(150px);
+    }
+
+    section .color:nth-child(1) {
+        top: -350px;
+        width: 600px;
+        height: 600px;
+        background: #ff359b;
+    }
+
+    section .color:nth-child(2) {
+        bottom: -150px;
+        left: 100px;
+        width: 500px;
+        height: 500px;
+        background: #fffd87;
+    }
+
+    section .color:nth-child(3) {
+        bottom: 50px;
+        right: 100px;
+        width: 300px;
+        height: 300px;
+        background: #00d2ff;
+    }
+
+    .box {
+        position: relative;
+    }
+
+    .box .square {
+        position: absolute;
+        backdrop-filter: blur(5px);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 10px;
+        animation: animate 10s linear infinite;
+        animation-delay: calc(-1s * var(--i));
+    }
+
+    @keyframes animate {
+
+        0%,
+        100% {
+            transform: translate(-50%, -50%);
+        }
+
+        50% {
+            transform: translate(50%, 50%);
+        }
+    }
+
+    .box .square:nth-child(1) {
+        top: -50px;
+        right: -60px;
+        width: 100px;
+        height: 100px;
+
+    }
+
+    .box .square:nth-child(2) {
+        top: 150px;
+        left: -100px;
+        width: 120px;
+        height: 120px;
+        z-index: 2;
+    }
+
+    .box .square:nth-child(3) {
+        bottom: 50px;
+        right: -60px;
+        width: 80px;
+        height: 80px;
+        z-index: 2;
+    }
+
+    .box .square:nth-child(4) {
+        bottom: -80px;
+        left: 100px;
+        width: 50px;
+        height: 50px;
+
+    }
+
+    .box .square:nth-child(5) {
+        top: -80px;
+        left: 140px;
+        width: 60px;
+        height: 60px;
+
+    }
+
+    .container {
+        position: relative;
+        width: 400px;
+        min-height: 400px;
+        background: linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
+            linear-gradient(227deg, #008aff, rgba(0, 138, 255, 0) 70%),
+            linear-gradient(104deg, #00ffc6, rgba(0, 255, 198, 0) 74%);
+        ;
+        border-radius: 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        backdrop-filter: blur(50px);
+        box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+        border: 2px solid linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
+            linear-gradient(227deg, #008aff, rgba(0, 138, 255, 0) 70%),
+            linear-gradient(104deg, #00ffc6, rgba(0, 255, 198, 0) 74%);
+        ;
+        border-radius: 25px;
+        animation: animaty 1s ease;
+        z-index: 1000;
+
+
+    }
+
+    @keyframes animaty {
+
+        0% {
+            opacity: 0;
+            transform: translate(-50%, -50%);
+            background-color: black;
+
+
+        }
+
+
+        100% {
+            opacity: 1;
+            transform: translate(0%, 0%);
+        }
+    }
+
+    .form {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        padding: 40px;
+
+    }
+
+    .form h2 {
+        position: relative;
+        color: #fff;
+        font-size: 24px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        margin-bottom: 40px;
+    }
+
+    .form h2::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        width: 80px;
+        height: 4px;
+        background: #fff;
+
+    }
+
+    .form .inputBox {
+        width: 100%;
+        margin-top: 20px;
+
+    }
+
+    .form .inputBox input {
+        width: 100%;
+        background: rgba(255, 255, 255, 0.2);
+        border: none;
+        outline: none;
+        padding: 10px 20px;
+        border-radius: 35px;
+        border: 1px solid rgba(255, 255, 255, 0.5);
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        font-size: 16px;
+        letter-spacing: 1px;
+        color: #fff;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    }
+
+    .form .inputBox input::placeholder {
+        color: #fff;
+
+    }
+
+    .form .inputBox input[type="submit"] {
+        background: #fff;
+        color: #666;
+        max-width: 150px;
+        cursor: pointer;
+        margin-bottom: 20px;
+        font-weight: 600;
+
+    }
+
+    .form .inputBox input[type="submit"]:hover {
+
+        background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+        animation: slidebg 5s linear infinite;
+
+
+    }
+
+    @keyframes slidebg {
+        to {
+            background-position: 20vw;
+        }
+    }
+
+    a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 150px;
+        height: 45px;
+        text-decoration: none;
+        color: #666;
+        background: white;
+        font-size: 16px;
+        letter-spacing: 2px;
+        overflow: hidden;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        border-radius: 35px;
+    }
+
+    form a {
+
+        background: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);
+        animation: slidebg 5s linear infinite;
+    }
+
+
+
+    @keyframes slidebg {
+        to {
+            background-position: 20vw;
+        }
+    }
+
+
+
+    span {
+        position: relative;
+        display: block;
+        transition: .3s ease;
+
+    }
+
+    span::before {
+        content: attr(data-text);
+        position: absolute;
+        transform: translateY(40px);
+    }
+
+    .container:hover span {
+        transform: translateY(-40px);
+    }
+
+    .container span:nth-child(1) {
+        transition-delay: .05s;
+    }
+
+    .container span:nth-child(2) {
+        transition-delay: .10s;
+    }
+
+    .container span:nth-child(3) {
+        transition-delay: .20s;
+    }
+
+    .container span:nth-child(4) {
+        transition-delay: .30s;
+    }
+</style>
+
+<body>
+    <section>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="color"></div>
+        <div class="box">
+            <div class="square" style="--i:0;"></div>
+            <div class="square" style="--i:1;"></div>
+            <div class="square" style="--i:2;"></div>
+            <div class="square" style="--i:3;"></div>
+            <div class="square" style="--i:4;"></div>
+
+            <div class="container">
+                <div class="form">
+                    <h2><i CLASS="fa fa-envelope-open-o"></i>&nbspSUBSCRIPTION FORM</h2>
+                    <form>
+                        <div class="inputBox">
+                            <input type="text" placeholder="Name">
+                        </div>
+                        <div class="inputBox">
+                            <input type="email" placeholder="Email">
+                        </div>
+                        <div id="er">
+                            <div class="inputBox">
+                                <input type="submit" value="SUBSCRIBE">
+                            </div>
+
+
+                            <p>Subscribe to our emails through which you become aware about new threats which will make
+                                you and your family protected and safe.</p>
+                            <br>
+                            <a href="project.html">
+                                <span data-text="H">H</span>
+                                <span data-text="O">0</span>
+                                <span data-text="M">M</span>
+                                <span data-text="E">E</span>
+                            </a>
+
+                    </form>
+                </div>
+
+            </div>
+
+
+        </div>
+    </section>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<HEAD>
+    <TITLE>ADDING AND UPDATE</TITLE>
+</HEAD>
+
+<BODY>
+    <section class="sup">
+        <div class="image">
+            <img src="logo.png">
+        </div>
+        <div class="contentbox">
+            <div class="formbox">
+                <h2 class="signups">signup Here</h2>
+                <form name="myform" autocomplete="off" >
+                    <div class="inputbox">
+                        <span class="spans">User ID:</span>&emsp;&ensp;&emsp;
+                        <input type="text" id="usernamelogin" placeholder="User ID Or Email ID" maxlength="15"
+                            class="textbox"><span class="formerror"></span>
+                    </div>
+                    <div class="inputbox">
+                        <span class="spans">First Name:</span>&ensp;&emsp;
+                        <input type="text" id="firstnamesignup"placeholder="Enter Your First Name"
+                            maxlength="15" class="textbox"><span class="formerror"></span>
+                    </div>
+                    <div class="inputbox">
+                        <span class="spans">Last Name:</span>&ensp;&emsp;
+                        <input type="text" id="lastnamesignup"placeholder="Enter Your Second Name"
+                            maxlength="10" class="textbox"><span class="formerror"></span>
+                    </div>
+                    <div class="inputbox">
+                        <span class="spans">Password:</span>&ensp;&emsp;&emsp;
+                        <input type="password" id="passwordlogin"placeholder="Enter password" maxlength="10"
+                            class="textbox"><span class="formerror"></span>
+                    </div>
+                    <div class="inputbox">
+                        <span id="password" class="spans">Confirm Password:</span>&nbsp;
+                        <input type="password" id="passwordlogin2"placeholder="Enter Password" maxlength="10"
+                            class="textbox"><span class="formerror2"></span>
+                    </div>
+                    <div class="inputbox">
+                        <!-- <button class="signupbtn" onclick="clicked()">SIGN UP</button> -->
+                        <input class="signupbtn" type="submit" name="submit" value="SIGN UP" onclick="clicked(event)">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <script>
+     
+      
+        function clicked(e){
+            e.preventDefault();
+          var v = document.querySelector('#usernamelogin')
+           var i = v.value 
+           var s = document.querySelector('#firstnamesignup')
+           var h = s.value 
+           var n = document.querySelector('#lastnamesignup')
+           var u = n.value 
+           var b = document.querySelector('#passwordlogin')
+           var y = b.value 
+           var x = document.querySelector('#passwordlogin2')
+           var z = x.value 
+           if (i === "" || h === "" || u === "" || y == "" || z === ""){
+               alert("PLEASE FILL ALL THE FIEDLS CORRECTLY")
+           }else{
+               location.href = "project.html";
+           }
+
+
+
+
+        }
+    </script>
+    
+    
+    
+</BODY>
+</HTML>

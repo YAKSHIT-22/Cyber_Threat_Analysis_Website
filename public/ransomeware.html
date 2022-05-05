@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="CYBERSECURITY">
+  <meta name="keywords" content="THREATS">
+  <meta name="author" content="YAKSHT">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>CYBER | THREATS AND ANALYSIS</title>
+  <link rel="icon"
+    href="https://img.icons8.com/external-sketchy-juicy-fish/60/000000/external-cyber-cyber-security-sketchy-sketchy-juicy-fish-3.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@200&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- css -->
+  <style>
+    /* variable declaration */
+
+    :root {
+      --fg-color: rgba(255, 255, 255, 0.9);
+      --bg-color: #2b2b2b;
+      --highlight-primary: #008aff;
+      --gradient:
+        linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
+        linear-gradient(245deg, #008aff, rgba(0, 138, 255, 0) 70%),
+        linear-gradient(120deg, #00ffc6, rgba(0, 255, 198, 0) 70%);
+      ;
+      --nav-height: 50px;
+      --transition: 250ms ease-out;
+      --transition-long: 500ms ease-out;
+    }
+
+    html {
+      font-family: "livvic";
+      font-size: 16px;
+      font-weight: 100;
+      scroll-behavior: smooth;
+      cursor: url("https://img.icons8.com/fluency/25/000000/cursor--v1.png"), default;
+    }
+
+    /* scrollbar properties */
+
+    html::-webkit-scrollbar {
+      width: .1px;
+    }
+
+    html::-webkit-scrollbar-track {
+      background: black;
+    }
+
+    html::-webkit-scrollbar-thumb {
+      background: linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
+        linear-gradient(227deg, #008aff, rgba(0, 138, 255, 0) 70%),
+        linear-gradient(104deg, #00ffc6, rgba(0, 255, 198, 0) 74%);
+      ;
+      border-radius: 5px;
+    }
+
+    /* main body styling */
+
+    body {
+      display: flex !important;
+      justify-content: center;
+      box-shadow: inset 0px 10px 10px 10px #008aff;
+      padding-top: var(--nav-height);
+      opacity: 1;
+      overflow: hidden;
+      min-height: 400vh;
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+      background-image: url(ikl.gif);
+      color: var(--fg-color);
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed;
+      background-position-x: center;
+      background-position-y: -100px;
+    }
+
+    /* navbar styling  */
+
+    .artwork {
+      width: 40vmin;
+      filter: grayscale(1) opacity(0.2);
+    }
+
+    header {
+      display: flex;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: var(--nav-height);
+      font-size: 1.5rem;
+      background: var(--bg-color);
+      color: var(--fg-color);
+      display: flex;
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
+      box-shadow: -2px 2px 8px 0px rgb(0 0 0 / 80%);
+      border-bottom: 1px solid var(--highlight-primary);
+      z-index: 999;
+    }
+
+    /* site logo styling */
+
+    .logo {
+      display: grid;
+      place-content: center;
+      margin-right: -40px;
+      padding: 0rem 1.5rem;
+      margin-left: -10px;
+      color: var(--highlight-primary);
+    }
+
+    .logo>i {
+      border-top-left-radius: 50%;
+      border-bottom-right-radius: 50%;
+      padding: 0.25rem;
+      background: var(--highlight-primary);
+      color: var(--bg-color);
+    }
+
+    /* nav list styling */
+
+    header ul {
+      display: grid;
+      grid-auto-flow: column;
+      grid-auto-columns: max-content;
+      grid-template-rows: 1fr;
+      gap: 0.5rem;
+      margin-right: 10px;
+      margin-left: 5px;
+      padding: 0rem .1rem;
+      list-style-type: none;
+    }
+
+    header ul>li {
+      display: grid;
+
+      padding: 4%;
+    }
+
+    header a {
+      display: flex;
+      align-items: center;
+
+      padding: 0rem 1.5rem;
+      border-radius: 0.25rem;
+
+      color: var(--fg-color);
+      background-color: rgba(0, 0, 0, 0.1);
+
+      text-decoration: none;
+
+      transition: background-color var(--transition);
+    }
+
+    header a>i {
+      margin-right: 0rem;
+
+      color: var(--highlight-primary);
+
+      font-size: 1rem;
+
+      transition: color var(--transition);
+    }
+
+    header a:hover {
+      background-color: var(--highlight-primary);
+    }
+
+    header a:hover>i {
+      color: var(--bg-color);
+
+      transition: color var(--transition);
+    }
+
+    #nav-toggle-label {
+      display: none;
+      margin-top: 5px;
+      cursor: pointer;
+    }
+
+    #nav-toggle {
+      display: none;
+    }
+
+    #navi:hover {
+      box-shadow: 5px 5px 10px #008aff;
+      transition: 0.3s;
+    }
+
+
+    /* mobile viewport nav styling */
+
+    @media screen and (max-width: 1100px) {
+      header {
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      header nav {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        width: 25rem;
+        right: 0;
+        padding-top: var(--nav-height);
+        clip-path: circle(calc(var(--nav-height) / 3) at calc(100% - var(--nav-height) / 2) calc(0% + var(--nav-height) / 2));
+        background: var(--gradient);
+        box-shadow: -2px 2px 8px 0px rgb(0 0 0 / 80%);
+        transition: clip-path var(--transition-long),
+          background-color var(--transition-long);
+      }
+
+      header ul {
+        grid-auto-flow: row;
+        grid-template-columns: 1fr;
+        grid-template-rows: none;
+        grid-auto-rows: max-content;
+        gap: 0.5rem;
+        padding: 0;
+      }
+
+      header a {
+        place-content: flex-start;
+        padding: 0.5rem 1.5rem;
+      }
+
+      header a>i {
+        color: var(--bg-color);
+      }
+
+      header a:hover {
+        background-color: var(--bg-color);
+      }
+
+      header a:hover>i {
+        color: var(--highlight-primary);
+      }
+
+      /* clip path or nav bar height styling */
+
+      #nav-toggle:checked+*+nav {
+        clip-path: circle(400vmax at 100% 0%);
+        background-color: var(--bg-color);
+      }
+
+      #nav-toggle-label {
+        --size: calc(var(--nav-height) / 3);
+        --bar-height: 2px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        flex-basis: auto;
+        width: var(--size);
+        height: var(--size);
+        margin-right: calc(var(--nav-height) / 3);
+        z-index: 2;
+      }
+
+      #nav-toggle-label .bar {
+        display: inline-block;
+        height: var(--bar-height);
+        width: 100%;
+        background-color: var(--bg-color);
+        transition: transform 250ms ease-out;
+      }
+
+      /* navbar opening animation */
+
+      #nav-toggle:checked+#nav-toggle-label>.bar:nth-child(1) {
+        transform:
+          translate(0, calc(var(--size) / 2 - var(--bar-height) / 2)) rotate(225deg);
+      }
+
+      #nav-toggle:checked+#nav-toggle-label>.bar:nth-child(2) {
+        transform: scaleX(0);
+      }
+
+      #nav-toggle:checked+#nav-toggle-label>.bar:nth-child(3) {
+        transform:
+          translate(0, calc(-1 * var(--size) / 2 + var(--bar-height) / 2)) rotate(135deg);
+      }
+    }
+
+    /* site title animation */
+
+    svg {
+      margin-left: -8px;
+
+    }
+
+    svg text {
+
+      text-shadow: 0px 0px 10px #008aff;
+      font-size: 25px;
+      stroke-width: 3px;
+      fill: transparent;
+      stroke: #008aff;
+      letter-spacing: auto;
+      animation: effect 2.5s infinite alternate;
+    }
+
+    @keyframes effect {
+      0% {
+        stroke-dasharray: 0 70%;
+      }
+
+      100% {
+        stroke-dasharray: 50% 0;
+        stroke-dashoffset: 10%;
+      }
+
+    }
+
+    /* preloader css and animation */
+
+    .spinner-wrapper {
+      width: 100%;
+      min-height: 410vh;
+      background-color: #151515;
+      background-size: cover;
+      background-position: fixed;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 100px;
+      overflow: hidden !important;
+    }
+
+    .spinner {
+      position: relative;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      top: -1200px;
+      overflow: hidden;
+
+    }
+
+    .spinner::before,
+    .spinner:after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .spinner:before {
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(90deg, #ff00cc 10%, #008aff 20%, #00ffc6 30%, #e0e722 120%);
+      animation: spin .5s infinite linear;
+    }
+
+    .spinner:after {
+      width: 90%;
+      height: 90%;
+      background-color: #151515;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+
+    }
+
+    .main-content {
+      width: 100%;
+      height: 90%;
+      background: url("") center no-repeat;
+      background-size: cover;
+      overflow: hidden;
+
+    }
+
+
+    /* footer css */
+
+    #bodye {
+      display: flex;
+      justify-content: flex-end;
+      align-items: flex-end;
+      min-height: 12vh;
+      background-color: #333;
+      z-index: 1000;
+    }
+
+    footer {
+      position: absolute;
+      width: 100%;
+      max-height: 90px;
+      background-color: #3586ff;
+      padding: 20px 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    footer .social_icon {
+      position: relative;
+      margin: 8.5px 0;
+      margin-bottom: -22px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    footer .social_icon li {
+      list-style: none;
+    }
+
+    footer .social_icon li a {
+      font-size: 2em;
+      color: black;
+      margin: 0 10px;
+      display: inline-block;
+      transition: 0.5s;
+    }
+
+    footer .social_icon li a:hover {
+      transform: translateY(-7px);
+    }
+
+    footer p {
+      color: black;
+      text-align: center;
+      margin-top: 15px;
+      margin-bottom: 10px;
+      font-size: 1.3em;
+    }
+
+    footer .wave {
+      position: absolute;
+      width: 100%;
+      height: 100px;
+      top: -100px;
+      left: 0;
+      background: url(wave.png);
+      background-size: 1000px 100px;
+    }
+
+    footer .wave#wave1 {
+      z-index: 1000;
+      opacity: 1;
+      bottom: 0;
+      animation: animateWave 4s linear infinite;
+    }
+
+    footer .wave#wave2 {
+      z-index: 999;
+      opacity: 0.5;
+      bottom: 10px;
+      animation: animateWave_2 4s linear infinite;
+    }
+
+    footer .wave#wave3 {
+      z-index: 1000;
+      opacity: 0.2;
+      bottom: 15px;
+      animation: animateWave 3s linear infinite;
+    }
+
+    footer .wave#wave4 {
+      z-index: 999;
+      opacity: 0.2;
+      bottom: 20px;
+      animation: animateWave_2 3s linear infinite;
+    }
+
+    @keyframes animateWave {
+      0% {
+        background-position-x: 1000px;
+      }
+
+      100% {
+        background-position-x: 0px;
+      }
+    }
+
+    @keyframes animateWave_2 {
+      0% {
+        background-position-x: 0px;
+      }
+
+      100% {
+        background-position-x: 1000px;
+      }
+    }
+
+    /* main content css */
+
+    .container-fluid {
+      align-items: center;
+      position: absolute;
+      width: 100%;
+      display: grid;
+    }
+
+    /* thumbnail video css */
+
+    .container-fluid .jumbotron:nth-child(1) {
+      margin-top: 1px;
+      background-image: url(jum.gif);
+      background-origin: content-box;
+      background-position: center;
+      background-clip: padding-box;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position-y: -250px;
+      width: 100%;
+      height: 290px;
+      background-attachment: fixed;
+      padding: 10px 0px 10px 0px;
+    }
+
+    .container-fluid .jumbotron:nth-child(1)::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    .container-fluid .jumbotron:nth-child(1) #content-block {
+      padding-top: -50px;
+    }
+
+    .media-heading {
+      font-size: 20px;
+    }
+
+    /* content css   */
+
+    .container-fluid .jumbotron:nth-child(2) {
+      margin-top: -30px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: cover;
+      backdrop-filter: blur(3px);
+      backface-visibility: inherit;
+      width: 100%;
+      height: 560px;
+      overflow: auto;
+    }
+
+    .container-fluid .jumbotron:nth-child(2) span {
+      background: linear-gradient(45deg, #ba4aff, #008aff, #00ffc6);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .container-fluid .jumbotron:nth-child(2) h1 {
+      font-family: comic;
+      margin-bottom: 10px;
+    }
+
+    .container-fluid .jumbotron:nth-child(2)::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    .container-fluid .jumbotron:nth-child(3) {
+      margin-top: -30px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: cover;
+      backdrop-filter: blur(3px);
+      backface-visibility: inherit;
+      width: 100%;
+      height: 600px;
+      overflow: auto;
+
+    }
+
+    .container-fluid .jumbotron:nth-child(3) span {
+      background: linear-gradient(45deg, #ba4aff, #008aff, #00ffc6);
+      -webkit-text-fill-color: transparent;
+      -webkit-background-clip: text;
+      background-clip: text;
+    }
+
+    .container-fluid .jumbotron:nth-child(3) h1 {
+      font-family: comic;
+      margin-bottom: 10px;
+    }
+
+    .container-fluid .jumbotron:nth-child(2)::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    .container-fluid .jumbotron:nth-child(3)::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    /* news section css */
+
+    .yki {
+      margin-top: -20px;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      background-size: cover;
+      backdrop-filter: blur(3px);
+      width: 100%;
+      height: 650px;
+      overflow: auto;
+      padding: 0;
+      align-items: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .yki span {
+      position: relative;
+      display: inline-block;
+      font-size: 50px;
+      font-family: comic;
+      text-shadow: 2px 5px 5px #008aff;
+      color: #008aff;
+      text-transform: uppercase;
+      animation: flip 4s linear infinite;
+      animation-delay: calc(.5s * var(--i));
+    }
+
+    @keyframes flip {
+
+      0%,
+      80% {
+        transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+      }
+    }
+
+    .if2 {
+      padding-top: 20px;
+      align-self: center;
+      width: 100%;
+      height: 600px;
+    }
+
+    /* image carousel */
+
+    div#carousel {
+      perspective: 1200px;
+      background: transparent;
+      backdrop-filter: blur(3px);
+      padding: 10px 10px 10px 10px;
+      font-size: 0;
+      margin-bottom: 3rem;
+      overflow: hidden;
+      height: 770px;
+      margin-top: -30px;
+      margin-bottom: -10px;
+    }
+
+    figure#spinner {
+      padding-top: 10px;
+      transform-style: preserve-3d;
+      height: 300px;
+      transform-origin: 50% 50% -500px;
+      transition: 1s;
+      align-self: center;
+      padding: 10px 10px 10px 10px;
+      margin: 0 auto;
+    }
+
+    figure#spinner img {
+      margin-top: 20px;
+      padding-top: 20px;
+      width: 50%;
+      height: 600px;
+      max-width: 400px;
+      position: absolute;
+      left: 36%;
+      transform-origin: 50% 50% -500px;
+      outline: 1px solid transparent;
+    }
+
+    figure#spinner img:hover {
+      cursor: pointer;
+    }
+
+    @media screen and (max-width:1000px) {
+      figure#spinner img {
+        left: 25%;
+        width: 60%;
+      }
+    }
+
+    figure#spinner img:nth-child(1) {
+      transform: rotateY(0deg);
+    }
+
+    figure#spinner img:nth-child(2) {
+      transform: rotateY(-45deg);
+    }
+
+    figure#spinner img:nth-child(3) {
+      transform: rotateY(-90deg);
+    }
+
+    figure#spinner img:nth-child(4) {
+      transform: rotateY(-135deg);
+    }
+
+    figure#spinner img:nth-child(5) {
+      transform: rotateY(-180deg);
+    }
+
+    figure#spinner img:nth-child(6) {
+      transform: rotateY(-225deg);
+    }
+
+    figure#spinner img:nth-child(7) {
+      transform: rotateY(-270deg);
+    }
+
+    figure#spinner img:nth-child(8) {
+      transform: rotateY(-315deg);
+    }
+
+    /* next button css */
+
+    #carousel~button {
+      background-image: linear-gradient(144deg, #AF40FF, #5B42F3 50%, #00DDEB);
+      ;
+      width: 100px;
+      height: 50px;
+      border-radius: 5px;
+      align-items: center;
+      justify-self: center;
+      align-self: center;
+      display: relative;
+      text-decoration: none;
+      font-size: 2rem;
+      transition: 0.6s color;
+      position: relative;
+      margin-top: -8rem;
+      margin-bottom: 1rem;
+      border-bottom: none;
+      line-height: 0;
+      padding: 2px 2px 2px 2px;
+      box-shadow: 0px 0px 3px 3px #00ddeb;
+    }
+
+    div#carousel~button:hover {
+      cursor: pointer;
+    }
+  </style>
+
+  <!-- preloader html -->
+  <div class='spinner-wrapper'>
+    <div class="spinner"></div>
+  </div>
+  <div class="main-content"></div>
+
+  <!-- navbar html and setup -->
+
+  <header id="navi">
+    <div class="logo">
+      <i class="fas fa-hat-cowboy-side"></i>
+    </div>
+    <svg xmlns="http://www.w3.org/2000/" width="50%vw" height="7vh">
+      <text x="7%" y="70%">CYBER THREAT | ANALYSIS</text>
+    </svg>
+    <input type="checkbox" class="toggle" id="nav-toggle">
+    <label for="nav-toggle" id="nav-toggle-label">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </label>
+    <nav>
+      <ul>
+        <li>
+          <a href="project.html"><i class="fa fa-home"></i>&nbspHOME</a>
+        </li>
+        <li>
+          <a><i class="fa fa-address-card" onclick="location.href='about.html'"></i><button
+              onclick="location.href='about.html'">&nbspABOUT</button></a>
+        </li>
+        <li>
+          <a href="contactus.html"><i class="fa fa-phone"></i>&nbspCONTACT</a>
+        </li>
+        <li>
+          <a><i class="fa fa-check" onclick="location.href='subscription.html'"></i><button
+              onclick="location.href='subscription.html'">&nbspSUBSCRIBE</button></a>
+        </li>
+      </ul>
+
+
+    </nav>
+  </header>
+
+  <!-- main content html -->
+
+  <div class="container-fluid">
+    <div class="jumbotron">
+    </div>
+    <div class="jumbotron">
+      <div class="content-block">
+        <h1 class="text-center text-lg-center" style="font-size:60px;">What is<span> Ransomware?</span></h1>
+        <p>Ransomware is a type of malicious software (or “malware”) that infects computers, then encrypts various files
+          and demands a ransom to get them back. Even if you pay the money within the timeframe the criminals set,
+          there’s no guarantee you’ll get your files back. Typical ransoms are at least $500, but some of them ask for
+          much more (particularly if they hit a larger business that can’t function without immediate and reliable
+          access to its data, such as a hospital).
+        </p>
+        <p>Ransomware can hit anyone, and these types of cyberattacks are common and successful. You’ve probably heard
+          of some of the bigger, more damaging ones in the news, like WannaCry or NotPetya. The WannaCry ransomware
+          attack alone is estimated to have caused $4 billion in losses to businesses around the world, while NotPetya
+          cost organizations upwards of $1.2 billion. Part of what made these attacks so devastating was how quickly
+          they spread. Even devices that weren’t connected to the internet, but were connected via local area network to
+          other internet-connected machines, got infected.</p><br>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="media d-block">
+              <div class="align-self-start mr-3">
+                <i class="tf-circle-compass"></i>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading" style="border-bottom: 2px solid #57cbcc; width: 70%; padding-bottom: 5px;">
+                  Ransomware-as-a-Service (RaaS)</h4>
+                <p>In the last several years, we’ve also seen Ransomware-as-a-Service (RaaS) pop up. RaaS is when
+                  ransomware authors put together do-it-yourself kits that other criminals with less programming skill
+                  or malware know-how can use to launch their own attacks. That makes delivering ransomware even more
+                  widely accessible for the casual script kiddie (i.e. an unskilled person who uses automated tools
+                  written by black hat hackers to break into computer systems.)</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="media d-block">
+              <div class="align-self-start mr-3">
+                <i class="tf-hotairballoon"></i>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading" style="border-bottom: 2px solid #57cbcc; width: 70%; padding-bottom: 5px;">
+                  Best way to handle a ransomware infection</h4>
+                <p>Unfortunately, the best way to handle a ransomware infection is not to get one in the first place.
+                  While you can remove the infection, that still leaves your files encrypted, and there’s very little
+                  chance of anyone decrypting them without the unique decryption key. The only way to get those files
+                  back is to pay the ransom and hope the criminals hand over the key (and that the key works), or to
+                  remove the malware and restore your files from a clean backup.If you want to stay safe, we recommend
+                  using strong internet security software that can prevent brand new, never-before-seen malware and
+                  ransomware from infecting your computer; keep your computer programs and operating system up to date;
+                  practice good online hygiene like using strong passwords and changing them frequently; avoid visiting
+                  risky websites and downloading apps or files from unverified sources; and back up your data to a
+                  secure physical drive that you keep disconnected from your computer when not in use.
+                </p>
+              </div>
+            </div>
+          </div><br>
+          <div class="col-lg-6" style="align-self: center;">
+            <div class="media d-block" style="align-self:center;">
+              <div class="mr-3">
+                <i class="tf-hotairballoon"></i>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading" style="border-bottom: 2px solid #57cbcc; width: 70%; padding-bottom: 5px;">
+                  MORE ABOUT RANSOMEWARE👇👇👇</h4>
+                <p><iframe width="600" height="300" src="https://www.youtube.com/embed/Vkjekr6jacg"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                <p>
+
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="media d-block">
+              <div class="mr-3">
+                <i class="tf-hotairballoon"></i>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading" style="border-bottom: 2px solid #57cbcc; width: 70%; padding-bottom: 5px;">
+                  TOP 5 RANSOMWARE👇👇👇</h4>
+                <p><iframe width="560" height="315" src="https://www.youtube.com/embed/7gcd4xKwOhU"
+                    title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="jumbotron tyi">
+      <div class="content-block">
+        <h1 class="text-center text-lg-center" style="font-size:50px;">Ransomware:<span> a Modern Threat to Public
+            Safety</span></h1>
+        <p>Ransomware authors are pivoting their attacks from individuals to government entities and health care
+          institutions, causing a threat to public safety. Traditionally, crypto ransomware targeted individuals and
+          encrypted their personal data and files as a form of extortion for hundreds of dollars. Ransomware has evolved
+          to target businesses and government agencies for much larger financial gains.</p>
+        <br>
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="media d-block">
+              <div class="align-self-start mr-3">
+                <i class="tf-circle-compass"></i>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading" style="border-bottom: 2px solid #57cbcc; width: 70%; padding-bottom: 5px;">
+                  The cost of ransomware</h4>
+                <p>There are countless news stories of hospitals and other institutions being shut down by ransomware.
+                  We have been seeing an increase in attacks on government entities, including counties and police
+                  departments.
+                  A small Ohio town experienced a ransomware attack earlier this year that shut down county government
+                  offices and 911 dispatch. This slowed their emergency response but luckily they were still able to
+                  respond to emergency 911 calls.
+                  The financial costs to these organizations are also a concern and they’ve been steadily increasing as
+                  crypto ransomware continues to evolve.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="media d-block">
+              <div class="align-self-start mr-3">
+                <i class="tf-hotairballoon"></i>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading" style="border-bottom: 2px solid #57cbcc; width: 70%; padding-bottom: 5px;">
+                  An issue of public safety</h4>
+                <p>Ransomware attacks targeting hospitals are increasing, crippling critical infrastructure and exposing
+                  or hindering Electronic Health Records (EHR). When these records are impacted, it causes patient care
+                  to be hindered or halted. As more organizations implement connected medical devices and allow
+                  employees to bring their own devices to work, access points for unauthorized users are left
+                  open.Earlier this year, an attack on police CCTV cameras in Washington D.C. crippled the city’s
+                  surveillance system and forced major citywide reinstallation. Although this attack was an extortion
+                  effort, it makes you wonder how similar attacks will be used to cripple government emergency response
+                  and how cyberattack methods are evolving.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="media d-block">
+              <div class="mr-3">
+                <i class="tf-hotairballoon"></i>
+              </div>
+              <div class="media-body">
+                <h4 class="media-heading" style="border-bottom: 2px solid #57cbcc; width: 70%; padding-bottom: 5px;">
+                  What the government is doing about it</h4>
+                <p>Ransomware and other cyberattacks on government operations are a real issue of public safety and
+                  steps need to be taken to improve response time to such attacks. The FBI recommends taking prevention
+                  and continuity measures to lessen the risk from ransomware attacks.
+                <ul>
+                  <li style="font-size:18px;">1. Back up your data locally or in the cloud.</li>
+                  <li style="font-size:18px;">2. Secure backups and keep them on scheduled updates</li>
+                  <li style="font-size:18px;">3. Keep your operating system, software, and firmware up-to-date</li>
+                  <li style="font-size:18px;">4. Report internet crimes to the Internet Crime Complaint Center (IC3)
+                  </li>
+                </ul>
+                </p>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+
+
+    <div id="carousel">
+      <figure id="spinner">
+        <img onclick="location.href = 'cybersecurity.html';" src="19.png" alt>
+        <img onclick="location.href = 'https://www.hacksplaining.com/';" src="17.png" alt>
+        <img onclick="location.href = 'sqlinjection.html';" src="16.png" alt>
+        <img onclick="location.href = 'trojanhorse.html';" src="14.png" alt>
+        <img onclick="location.href = 'virus.html';" src="15.png" alt>
+        <img onclick="location.href = 'socialengineering.html';" src="18.png" alt>
+        <img onclick="location.href = 'malware.html';" src="13.png" alt>
+        <img onclick="location.href = 'ransomeware.html';" src="12.png" alt>
+      </figure>
+    </div>
+    <!-- <button style="float:left" class="ss-icon" onclick="galleryspin('-')">PREV</button> -->
+    <button style="float:right" class="ss-icon" onclick="galleryspin('-')">NEXT</button>
+    <!-- live cyber news html    -->
+
+    <div class="jumbotron yki">
+      <h1>
+        <span style="--i:1">C</span>
+        <span style="--i:2">Y</span>
+        <span style="--i:3">B</span>
+        <span style="--i:4">E</span>
+        <span style="--i:5">R</span>
+        <span style="--i:6">N</span>
+        <span style="--i:7">E</span>
+        <span style="--i:8">W</span>
+        <span style="--i:9">S</span>
+      </h1>
+      <iframe class="if2" width="300" height="440"  src="https://rss.app/embed/v1/carousel/tghryps1ZuFzO2uA" frameborder="0"></iframe>
+    </div>
+  </div>
+
+  <!-- footer html -->
+
+  <section id="bodye">
+    <footer>
+      <div class="waves">
+        <div class="wave" id="wave1"></div>
+        <div class="wave" id="wave2"></div>
+        <div class="wave" id="wave3"></div>
+        <div class="wave" id="wave4"></div>
+      </div>
+      <ul class="social_icon">
+        <li><a href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a></li>
+        <li><a href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a></li>
+        <li><a href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a></li>
+        <li><a href="#">
+            <ion-icon name="logo-github"></ion-icon>
+          </a></li>
+      </ul>
+      <p><b>@2021 TEAM LEVEL SEVEN | ALL RIGHTS RESERVED</b></p>
+    </footer>
+  </section>
+
+  <!-- javascript -->
+
+  <script>
+
+    // preloader javascript
+
+    let spinnerWrapper = document.querySelector('.spinner-wrapper');
+    let body = document.querySelector('body');
+    window.addEventListener('load', function () {
+      // spinnerWrapper.style.display = 'none';
+      spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      body.style.overflow = "auto";
+    });
+
+
+    //image carousal javascript
+
+    var angle = 0;
+    function galleryspin(sign) {
+      spinner = document.querySelector("#spinner");
+      if (!sign) { angle = angle + 45; } else { angle = angle - 45; }
+      spinner.setAttribute("style", "-webkit-transform: rotateY(" + angle + "deg); -moz-transform: rotateY(" + angle + "deg); transform: rotateY(" + angle + "deg);");
+    }
+
+  </script>
+</body>
+<!-- END OF PAGE-->
+
+</html>

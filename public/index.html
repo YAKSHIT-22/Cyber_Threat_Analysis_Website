@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="CYBERSECURITY">
+  <meta name="keywords" content="THREATS">
+  <meta name="author" content="YAKSHT">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>CYBER | THREATS AND ANALYSIS</title>
+  <link rel="icon"
+    href="https://img.icons8.com/external-sketchy-juicy-fish/60/000000/external-cyber-cyber-security-sketchy-sketchy-juicy-fish-3.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@200&display=swap" rel="stylesheet">
+
+</head>
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  /* html{
+  min-width: 1000px;
+} */
+  html::-webkit-scrollbar {
+    width: .1px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: black;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
+      linear-gradient(227deg, #008aff, rgba(0, 138, 255, 0) 70%),
+      linear-gradient(104deg, #00ffc6, rgba(0, 255, 198, 0) 74%);
+    ;
+    border-radius: 5px;
+  }
+
+  body,
+  button {
+    font-family: "livvic";
+
+  }
+
+  .container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #2b2b2b;
+    background-image: linear-gradient(135deg, #485461 0%, black 74%);
+    overflow-x: hidden;
+    transform-style: preserve-3d;
+  }
+
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    height: 3rem;
+  }
+
+  .menu {
+    max-width: 72rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+  }
+
+  .logo {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    line-height: 4rem;
+  }
+
+  .logo span {
+    font-weight: 300;
+  }
+
+  .hamburger-menu {
+    height: 4rem;
+    width: 3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .bar {
+    width: 1.9rem;
+    height: 1.5px;
+    border-radius: 2px;
+    background-color: #eee;
+    transition: 0.5s;
+    position: relative;
+  }
+
+  .bar:before,
+  .bar:after {
+    content: "";
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #eee;
+    transition: 0.5s;
+  }
+
+  .bar:before {
+    transform: translateY(-9px);
+  }
+
+  .bar:after {
+    transform: translateY(9px);
+  }
+
+  .main {
+    position: relative;
+    width: 100%;
+    left: 0;
+    z-index: 5;
+    overflow: hidden;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: 0.5s;
+  }
+
+  header {
+    min-height: 100vh;
+    width: 100%;
+    background: url("ikl.gif") no-repeat top center / cover;
+    position: relative;
+  }
+
+  .overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    top: 0px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .inner {
+    max-width: 60rem;
+    text-align: center;
+    color: #fff;
+    padding: 2rem 2rem;
+  }
+
+  .title {
+    display: inline-block;
+    background: linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
+      linear-gradient(227deg, #008aff, rgba(0, 138, 255, 0) 70%),
+      linear-gradient(104deg, #00ffc6, rgba(0, 255, 198, 0) 74%);
+    ;
+    ;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+
+  }
+
+  .btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.8rem;
+    background-color: #1179e7;
+    border: none;
+    border-radius: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+  }
+
+  .container.active .bar {
+    transform: rotate(360deg);
+    background-color: transparent;
+  }
+
+  .container.active .bar:before {
+    transform: translateY(0) rotate(45deg);
+  }
+
+  .container.active .bar:after {
+    transform: translateY(0) rotate(-45deg);
+  }
+
+  .container.active .main {
+    animation: main-animation 0.5s ease;
+    cursor: pointer;
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+  }
+
+  @keyframes main-animation {
+    from {
+      transform: translate(0);
+    }
+
+    to {
+      transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    }
+
+  }
+
+  .links {
+    position: absolute;
+    width: 30%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  ul {
+    list-style: none;
+  }
+
+  .links a {
+    text-decoration: none;
+    color: #eee;
+    padding: 0.7rem 0;
+    display: inline-block;
+    font-size: 1rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: hide 0.5s forwards ease;
+  }
+
+  .links a:hover {
+    color: #fff;
+  }
+
+  .container.active .links a {
+    animation: appear 0.5s forwards ease var(--i);
+  }
+
+  @keyframes appear {
+    from {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
+
+  @keyframes hide {
+    from {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+
+    to {
+      opacity: 0;
+      transform: translateY(10px);
+    }
+  }
+
+  .shadow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: 0.5s;
+    background-color: white;
+  }
+
+  .shadow.one {
+    z-index: -1;
+    opacity: 0.15;
+  }
+
+  .shadow.two {
+    z-index: -2;
+    opacity: 0.1;
+  }
+
+  .container.active .shadow.one {
+    animation: shadow-one 0.6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+  }
+
+  @keyframes shadow-one {
+    0% {
+      transform: translate(0);
+    }
+
+    5% {
+      transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    }
+
+    100% {
+      transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+    }
+  }
+
+  .container.active .shadow.two {
+    animation: shadow-two 0.6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+  }
+
+  @keyframes shadow-two {
+    0% {
+      transform: translate(0);
+    }
+
+    20% {
+      transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    }
+
+    100% {
+      transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+    }
+  }
+
+  .container.active .main:hover+.shadow.one {
+    transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
+  }
+
+  .container.active .main:hover {
+    transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.5);
+  }
+
+  @media screen and (max-width: 768px) {
+    .container.active .main {
+      animation: main-animation 0.5s ease;
+      cursor: pointer;
+      transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.4);
+    }
+
+    @keyframes main-animation {
+      from {
+        transform: translate(0);
+      }
+
+      to {
+        transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.4);
+      }
+    }
+
+    .container.active .main:hover+.shadow.one {
+      transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.4);
+    }
+
+    .container.active .shadow.one {
+      animation: shadow-one 0.6s ease-out;
+      transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.4);
+    }
+
+    @keyframes shadow-one {
+      0% {
+        transform: translate(0);
+      }
+
+      5% {
+        transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.4);
+      }
+
+      100% {
+        transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.4);
+      }
+    }
+
+    .container.active .shadow.two {
+      animation: shadow-two 0.6s ease-out;
+      transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.4);
+    }
+
+    @keyframes shadow-two {
+      0% {
+        transform: translate(0);
+      }
+
+      20% {
+        transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.4);
+      }
+
+      100% {
+        transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.4);
+      }
+    }
+
+    .container.active .main:hover+.shadow.one {
+      transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.4);
+    }
+
+    .container.active .main:hover {
+      transform: perspective(1300px) rotateY(20deg) translateZ(340px) scale(0.4);
+    }
+  }
+</style>
+
+<body>
+  <div class="container">
+    <div class="navbar">
+      <div class="menu">
+        <h3 class="logo">CYBER | <span>THREATS AND ANALYSIS</span></h3>
+        <div class="hamburger-menu">
+          <div class="bar"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="main">
+        <header>
+          <div class="overlay">
+            <div class="inner">
+              <h2 class="title" style="font-size: 40px;">WELCOME TO CYBER | THREATS AND ANALYSIS</h2><br><br>
+              <p style="font-size: 23px;">
+                ARE YOU SAFE ON INTERNET?..<br>IS YOUR DATA PRIVATE?<br>
+                LEARN ABOUT CYBERSECURITY WITH US & GET ANSWERS TO SOME OF THESE MAJOR QUESTIONS.....
+              </p>
+              <button class="btn" onclick="location.href='project.html'">GET STARTED</button>
+            </div>
+          </div>
+        </header>
+      </div>
+      <div class="shadow one"></div>
+      <div class="shadow two"></div>
+    </div>
+
+    <div class="links">
+      <ul>
+        <li>
+          <a href="project.html" style="--i: 0.05s;">Home</a>
+        </li>
+        <li>
+          <a href="about.html" style="--i: 0.1s;">About</a>
+        </li>
+        <li>
+          <a href="contactus.html" style="--i: 0.15s;">Contact</a>
+        </li>
+        <li>
+          <a href="subscription.html" style="--i: 0.2s;">Subscribe</a>
+        </li>
+        </li>
+        <li>
+          <a href="https://www.hacksplaining.com/" style="--i: 0.3s;">Hacksplaning</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <script>
+    const hamburger_menu = document.querySelector(".hamburger-menu");
+    const container = document.querySelector(".container");
+
+    hamburger_menu.addEventListener("click", () => {
+      container.classList.toggle("active");
+    });
+// window.resizeTo(768,500);
+
+  </script>
+</body>
+
+</html>

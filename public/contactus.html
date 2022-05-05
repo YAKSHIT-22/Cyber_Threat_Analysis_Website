@@ -1,0 +1,356 @@
+<!--doctype html-->
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CYBER THREAT | ANALYSIS</title>
+<!--link-stylesheet----------->
+<link rel="icon" href="https://img.icons8.com/external-sketchy-juicy-fish/60/000000/external-cyber-cyber-security-sketchy-sketchy-juicy-fish-3.png">
+<!--using-fontAwesome------------>
+<script src="https://kit.fontawesome.com/c8e4d183c2.js" crossorigin="anonymous"></script>
+<link href="https://fonts.googleapis.com/css2?family=Livvic:wght@200&display=swap" rel="stylesheet">
+</head>
+<style>
+    @charset "utf-8";
+/* CSS Document */
+*{
+   font-family: "livvic";
+}
+body{
+	margin:0px;
+	padding: 0px;
+	background-image:url(ikl.gif);
+    box-shadow: inset 0px 0px 10px 10px #008aff;
+    background-repeat:no-repeat;
+    background-size: cover;
+    background-position:center;
+	cursor: url("https://img.icons8.com/fluency/25/000000/cursor--v1.png"), default;
+}
+a{
+	text-decoration:none;
+}
+.social a{
+	padding: 20px;
+	color:#7b7c7c;
+	font-size:1.1rem;
+}
+#contact{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	display: flex;
+	align-items: center;
+}
+.social{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #FFFFFF;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+}
+.social a:hover{
+	color:#000000;
+	transition: all ease 0.3s;
+}
+.contact-box{
+	background-color: #151515;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 30px 30px;
+	box-shadow: 2px 0px 30px rgba(0,0,0,0.1);
+}
+.c-heading h1{
+	color: #e7eef3;
+	font-size: 2.5rem;
+	font-weight: lighter;
+	margin: 0px;
+	padding: 0px;
+}
+.c-heading p{
+
+	color:#cecece;
+	font-size: 0.8rem;
+	font-weight: lighter;
+	margin: 0px;
+	padding: 0px;
+	text-align: center;
+}
+.c-inputs{
+	margin: 15px 0px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+.c-inputs input{
+	width:250px;
+	height: 45px;
+	background-color: transparent;
+	border: none;
+	border-bottom: 1px solid rgba(251,251,251,0.1);
+	outline: none;
+	margin: 10px 0px;
+	padding: 10px;
+	box-sizing: border-box;
+	color: #f4f4f4;
+	display: flex;
+}
+.c-inputs textarea{
+	width:250px !important;
+	height: 200px !important;
+	outline: none;
+	background-color: transparent;
+	border:1px solid rgba(82,82,82,1);
+	color: #f4f4f4;
+	padding: 10px;
+	font-size: 1.2rem;
+	box-sizing: border-box;
+}
+.c-inputs button{
+	width:200px;
+	height: 40px;
+	background-color: #FFFFFF;
+	border: none;
+	outline: none;
+	margin-top: 20px;
+	border-radius: 10px;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.1);
+	letter-spacing: 1px;
+}
+.c-inputs input:focus{
+	border-bottom: 1px solid rgba(252,252,252,1.00);
+	transition: all ease 0.5s;
+}
+.c-inputs textarea:focus{
+	border: none;
+	border-bottom: 1px solid rgba(255,255,255,1.00);
+	transition: all ease 0.5s;
+	background-color: rgba(0,0,0,0.1);
+}
+.c-inputs button:active{
+	transform: scale(1.02);
+}
+.map{
+	filter: grayscale(0.2);
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+	border: 2px solid #FFFFFF;
+}
+@media(max-width:1100px){
+	.map{
+		display: none;
+	}
+}
+@media(max-width:450px){
+	.social{
+		display: none;
+	}
+	.contact-box{
+		width: 100%;
+		height: 100vh;
+		box-sizing: border-box;
+	}
+	#contact{
+		position: static;
+		transform: translate(0,0);
+		width:100%;
+		height: 100vh;
+		box-sizing: border-box;
+	}
+	.c-heading h1{
+		font-size: 2.2rem;
+		text-align: center;
+	}
+	
+}
+/* preloadeer */
+.spinner-wrapper {
+      width: 100%;
+      min-height: 100vh;
+      background-color: #151515;
+      background-size: cover;
+      background-position: fixed;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 100px;
+      overflow: hidden !important;
+    }
+
+    .spinner {
+      position: relative;
+      width: 8rem;
+      height: 8rem;
+      border-radius: 50%;
+      top: -10px;
+      overflow: hidden;
+
+    }
+
+    .spinner::before,
+    .spinner:after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+    }
+
+    .spinner:before {
+      width: 100%;
+      height: 100%;
+      background-image: linear-gradient(90deg, #ff00cc 10%, #008aff 20%, #00ffc6 30%, #e0e722 120%);
+      animation: spin .5s infinite linear;
+    }
+
+    .spinner:after {
+      width: 90%;
+      height: 90%;
+      background-color: #151515;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    @keyframes spin {
+      to {
+        transform: rotate(360deg);
+      }
+
+    }
+
+    .main-content {
+      width: 100%;
+      height: 90%;
+      background: url("") center no-repeat;
+      background-size: cover;
+      overflow: hidden;
+
+    }
+	.alert{
+  text-align: center;
+  padding:10px;
+  background:#79c879;
+  color:#fff;
+  margin-bottom:10px;
+  display:none;
+}
+ 
+</style>
+<body>
+    <div class='spinner-wrapper'>
+        <div class="spinner"></div>  
+      </div>
+      <div class="main-content"></div>
+<!--contact-form-container------------------->
+	<section id="contact">
+	<!--socail----------->
+	<div class="social">
+	<!--icons--------->
+	<a href="project.html"><i class="fa fa-home"></i>
+	<a href="#"><i class="fab fa-facebook-f"></i></a>
+	<a href="#"><i class="fab fa-twitter"></i></a>
+	<a href="#"><i class="fab fa-instagram"></i></a>
+	<a href="#"><i class="fab fa-dribbble"></i></a>
+	
+		
+	</div>
+	<!--contact-box------------->
+	<div class="contact-box">
+	<!--heading---------->
+	<div class="c-heading">
+	<h1>Contact Us📞</h1>
+	<p>Call Or Email Us Regarding Question Or Issues!</p>
+	</div>
+	<!--inputs------------------>
+	<div class="c-inputs">
+	<form id="contactForm" autocomplete="off"> 
+	<input type="text" placeholder="Full Name" id="name" required/>	
+	<input type="email" placeholder="Example@gmail.com" id="email" required/>
+	<textarea name="message" placeholder="Write Message" id="message"></textarea>
+	<!--sumbit-btn----------->
+	<button>SEND</button>
+	</form>
+	<div class="alert">Your message has been sent</div>
+	</div>
+		
+	</div>
+	<!--map------------------->
+	<div class="map">
+        <div style="max-width:100%;list-style:none; transition: none;overflow:hidden;width:500px;height:500px;"><div id="gmapcanvas" style="height:100%; width:100%;max-width:100%;"><iframe style="height:100%;width:100%;border:0;" frameborder="0" src="https://www.google.com/maps/embed/v1/search?q=cybercell+chandigarh&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe></div><a class="codefor-google-map" rel="nofollow" href="https://www.embed-map.com" id="enable-mapdata">https://www.embed-map.com</a><style>#gmapcanvas img{max-height:none;max-width:none!important;background:none!important;}</style></div>
+	</div>
+	</section>
+    <script>
+        let spinnerWrapper = document.querySelector('.spinner-wrapper');
+    let body=document.querySelector('body');
+    window.addEventListener('load', function () {
+      // spinnerWrapper.style.display = 'none';
+      spinnerWrapper.parentElement.removeChild(spinnerWrapper);
+      body.style.overflow ="auto";
+    });
+    </script>
+
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+	<script>
+		
+		firebase.initializeApp( {
+		  apiKey: "AIzaSyALeou5_nYlRxyc_dB0CI90LG2B1yuAgNw",
+		  authDomain: "contact-form-eabbf.firebaseapp.com",
+		  databaseURL: "https://contact-form-eabbf-default-rtdb.firebaseio.com",
+		  projectId: "contact-form-eabbf",
+		  storageBucket: "contact-form-eabbf.appspot.com",
+		  messagingSenderId: "252973080050",
+		  appId: "1:252973080050:web:81d0dfd92d26a5f8659f6b"
+		});
+		var db = firebase.firestore();
+	    
+
+	  </script>
+	<script>
+		
+		// Listen for form submit
+		document.getElementById('contactForm').addEventListener('submit', submitForm);
+		
+		// Submit form
+		function submitForm(e){
+		  e.preventDefault();
+		
+		  // Get values
+		  var name = getInputVal('name');
+		  
+		  var email = getInputVal('email');
+		  
+		  var message = getInputVal('message');
+		  firebase.firestore().collection("contacts").add({
+					name:name,
+					email:email,
+					message:message
+				})
+		 
+		
+		  // Show alert
+		  document.querySelector('.alert').style.display = 'block';
+		
+		  // Hide alert after 3 seconds
+		  setTimeout(function(){
+			document.querySelector('.alert').style.display = 'none';
+		  },3000);
+		
+		  // Clear form
+		  document.getElementById('contactForm').reset();
+		}
+		
+		// Function to get get form values
+		function getInputVal(id){
+		  return document.getElementById(id).value;
+		}
+			</script>
+</body>
+</html>

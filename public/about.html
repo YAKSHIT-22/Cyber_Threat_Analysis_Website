@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="CYBERSECURITY">
+  <meta name="keywords" content="THREATS">
+  <meta name="author" content="YAKSHT">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+  <title>CYBER | THREATS AND ANALYSIS</title>
+  <link rel="icon"
+    href="https://img.icons8.com/external-sketchy-juicy-fish/60/000000/external-cyber-cyber-security-sketchy-sketchy-juicy-fish-3.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@200&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@200&display=swap" rel="stylesheet">
+</head>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+
+  * {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+
+  html::-webkit-scrollbar {
+    width: .1px;
+  }
+
+  html::-webkit-scrollbar-track {
+    background: black;
+  }
+
+  html::-webkit-scrollbar-thumb {
+    background: linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
+      linear-gradient(227deg, #008aff, rgba(0, 138, 255, 0) 70%),
+      linear-gradient(104deg, #00ffc6, rgba(0, 255, 198, 0) 74%);
+    ;
+    border-radius: 5px;
+  }
+
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .about-wrapper {
+    height: 100vh;
+  }
+
+  .about-left {
+    background: linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
+      linear-gradient(245deg, #008aff, rgba(0, 138, 255, 0) 70%),
+      linear-gradient(120deg, #00ffc6, rgba(0, 255, 198, 0) 70%);
+    ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .about-left-content>div {
+    background: linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
+      linear-gradient(245deg, #008aff, rgba(0, 138, 255, 0) 70%),
+      linear-gradient(120deg, #00ffc6, rgba(0, 255, 198, 0) 70%);
+    ;
+    padding: 4rem 4rem 2.5rem 5rem;
+    text-align: center;
+  }
+
+  .about-left-content {
+    box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+    -webkit-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+    -moz-box-shadow: 0px 0px 18px -1px rgba(0, 0, 0, 0.39);
+  }
+
+  .about-img img {
+    display: block;
+    width: 200px;
+  }
+
+  .about-img {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .shadow {
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .shadow::after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.4);
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -20px;
+    height: 7px;
+    width: 50px;
+    filter: blur(3px);
+    -webkit-filter: blur(3px);
+    opacity: 0;
+    transition: all 0.6s ease;
+  }
+
+  .shadow:hover .about-img {
+    transform: translateY(-10px);
+  }
+
+  .shadow:hover::after {
+    opacity: 1;
+  }
+
+  .about-left-content h2 {
+    font-size: 2rem;
+    margin: 2.2rem 0 0.6rem 0;
+    line-height: 1.2;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #edffec;
+  }
+
+  .about-left-content h3 {
+    text-transform: uppercase;
+    font-weight: 300;
+    letter-spacing: 5px;
+    margin-top: 1.2rem;
+  }
+
+  .icons {
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    padding: 0.8rem 0;
+  }
+
+  .icons li {
+    list-style-type: none;
+    background: linear-gradient(300deg, #ba4aff, rgba(186, 74, 255, 0) 70%),
+      linear-gradient(245deg, #008aff, rgba(0, 138, 255, 0) 70%),
+      linear-gradient(120deg, #00ffc6, rgba(0, 255, 198, 0) 70%);
+    ;
+    color: #fff;
+    width: 40px;
+    height: 40px;
+    margin: 0 0.5rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .icons li:hover {
+    background: #edffec;
+    color: #000;
+  }
+
+  .about-right {
+    background: #fff;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 5rem;
+    text-align: center;
+  }
+
+  .about-right h1 {
+    font-size: 50px;
+    text-transform: uppercase;
+  }
+
+  .about-right h1 span {
+    color: #dd2d4a;
+  }
+
+  .about-right h2 {
+    font-weight: 600;
+    font-size: 22px;
+  }
+
+
+  .about-para p {
+    font-size: 20px;
+    font-weight: 300;
+    padding: 0.5rem;
+    opacity: 0.8;
+  }
+
+  @media screen and (min-width: 992px) {
+    .about-wrapper {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-left {
+      position: relative;
+    }
+
+    .about-left-content {
+      position: absolute;
+      right: -50px;
+    }
+  }
+</style>
+
+<body>
+
+  <div class="about-wrapper">
+    <div class="about-left">
+      <div class="about-left-content">
+        <div>
+          <div class="shadow">
+            <div class="about-img">
+              <img src="cyber.jpg" alt="about image">
+            </div>
+          </div>
+
+          <h2>LEVEL SEVEN</h2>
+          <h3>CHITKARA UNIVERSITY</h3>
+        </div>
+
+        <ul class="icons">
+          <li onclick="location.href='project.html'"><i onclick="location.href='project.html'" class="fa fa-home"></i>
+          </li>
+          <li><i class="fab fa-facebook-f"></i></li>
+          <li><i class="fab fa-twitter"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="about-right">
+      <h1 class="page">ABOUT US</h1><br><br>
+      <h1>Hi<span>!</span></h1>
+      <h2>Here's who We are & what We do</h2>
+
+      <div class="about-para">
+        <p>WE ARE THE CYBER TECH TEAM FROM CHITKARA UNIVERSITY.WE ARE HERE TO SPREAD AWARENESS! ABOUT THE WORLDS MOST
+          IMPORTANT CONCERN CYBERSECURITY</p>
+        <p>WE ARE HERE TO GIVE ANSWERS TO YOUR MAJOR QUESTIONS AND WORLDS CONCERNED QUESTION IS YOUR DATA SAFE ON
+          INTERNET??!!</p>
+      </div>
+    </div>
+  </div>
+
+
+</body>
+
+</html>
