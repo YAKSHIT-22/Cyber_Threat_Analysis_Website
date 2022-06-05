@@ -13,10 +13,9 @@
 <p align="center">
 <h2>Usage😁:-</h2>
 <ul>
-<li>This will make People aware of the increasing Cyber Threats and How to Be Safe From Them</li>
-
+<li>This will make People aware of the increasing Cyber Threats and How to Be Safe From Them</li></ul>
 <br>
 </p>
-<h2>Feel Free To Fork This Repo.(●'◡'●) And Please Support Me By Giving Star..🎇</h2>
+
 
 ## Not Maintaining Little Unresponsive Feel Free to Work On
